@@ -13,6 +13,10 @@ for follower in tweepy.Cursor(api.followers).items():
     follower.follow()
     print ("Followed everyone that is following " + user.name)
 
-tweet = 'Hello, world!'
-api.update_status(status=tweet)
+#tweet = 'Hello, world!'
+#api.update_status(status=tweet)
+
+public_tweets = api.home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
 
