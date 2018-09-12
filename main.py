@@ -2,6 +2,10 @@ import tweepy
 from credentials import *
 
 
+#TODO get reddit.py , import that and use top one that is valid for twitter (280 characters)
+#TODO Lambda function AWS to run every 24 hours
+#TODO tweet the thing
+
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
